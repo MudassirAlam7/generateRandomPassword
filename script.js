@@ -1,5 +1,6 @@
 let passwordBox = document.getElementById('password')
 let btn = document.querySelector('#button')
+let copy = document.getElementById('copy')
 
 
 let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -15,4 +16,17 @@ function genratepassword(){
     }
     passwordBox.value = password
 }
-btn.addEventListener('click', genratepassword)
+btn.addEventListener('click', genratepassword)  
+
+// function copyPassword(){
+//     passwordBox.select();
+//     document.execCommand('copy')
+// }
+
+
+
+function copyPassword(){
+    passwordBox.select()
+    document.execCommand("copy")
+}
+copy.addEventListener('click', copyPassword)
